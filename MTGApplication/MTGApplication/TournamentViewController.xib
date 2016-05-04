@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TournamentViewController">
+            <connections>
+                <outlet property="TournamentView" destination="i5M-Pr-FkT" id="PGp-fa-VzO"/>
+                <outlet property="myTableView" destination="V1h-zE-gM2" id="mti-xS-7tK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdx-Eh-B9S">
+                    <rect key="frame" x="0.0" y="25" width="760" height="44"/>
+                    <items>
+                        <navigationItem title="Tournament" id="j9N-mF-jKn">
+                            <barButtonItem key="leftBarButtonItem" title="Select" id="3it-xJ-8Vg">
+                                <connections>
+                                    <action selector="Select:" destination="-1" id="dt9-GV-p22"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Start" id="o6r-L4-zzs">
+                                <connections>
+                                    <action selector="Start:" destination="-1" id="9h2-kd-Qoy"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="5ub-jd-gEJ"/>
+                    </connections>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V1h-zE-gM2">
+                    <rect key="frame" x="0.0" y="69" width="760" height="955"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kZj-xU-iIj"/>
+                        <outlet property="delegate" destination="-1" id="g6Y-UX-XSy"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="337" y="421"/>
+        </view>
+    </objects>
+</document>
